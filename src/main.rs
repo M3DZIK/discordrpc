@@ -8,7 +8,7 @@ use discord_rich_presence::{
 };
 use std::{
     process::exit,
-    time::{SystemTime, UNIX_EPOCH},
+    time::{Duration, SystemTime, UNIX_EPOCH},
     vec,
 };
 
@@ -121,5 +121,7 @@ fn main() {
         "Press Ctrl+C to exit!".magenta()
     );
 
-    loop {}
+    loop {
+        std::thread::sleep(Duration::new(9999999, 9999999));
+    }
 }
