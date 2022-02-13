@@ -23,7 +23,7 @@ jobs:
         include:
           - os: ubuntu-latest
             target: x86_64-unknown-linux-musl
-            artifact_name: target/x86_64-unknown-linux-musl/release/imgurs
+            artifact_name: target/x86_64-unknown-linux-musl/release/discordrpc
             release_name: x86_64-unknown-linux-musl
             cross: true
             strip: true
@@ -32,7 +32,7 @@ jobs:
 
           - os: ubuntu-latest
             target: aarch64-unknown-linux-musl
-            artifact_name: target/aarch64-unknown-linux-musl/release/imgurs
+            artifact_name: target/aarch64-unknown-linux-musl/release/discordrpc
             release_name: aarch64-unknown-linux-musl
             cross: true
             strip: false
@@ -41,7 +41,7 @@ jobs:
 
           - os: windows-latest
             target: x86_64-pc-windows-msvc
-            artifact_name: target/x86_64-pc-windows-msvc/release/imgurs.exe
+            artifact_name: target/x86_64-pc-windows-msvc/release/discordrpc.exe
             release_name: x86_64-pc-windows-msvc.exe
             cross: false
             strip: true
@@ -50,7 +50,7 @@ jobs:
 
           - os: macos-latest
             target: x86_64-apple-darwin
-            artifact_name: target/x86_64-apple-darwin/release/imgurs
+            artifact_name: target/x86_64-apple-darwin/release/discordrpc
             release_name: x86_64-apple-darwin
             cross: false
             strip: true
@@ -59,7 +59,7 @@ jobs:
 
           - os: macos-latest
             target: aarch64-apple-darwin
-            artifact_name: target/aarch64-apple-darwin/release/imgurs
+            artifact_name: target/aarch64-apple-darwin/release/discordrpc
             release_name: aarch64-apple-darwin
             cross: false
             strip: true
@@ -125,7 +125,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{ matrix.artifact_name }}
           tag: ${{ github.ref }}
-          asset_name: imgurs-$tag-${{ matrix.release_name }}
+          asset_name: discordrpc-$tag-${{ matrix.release_name }}
           body: ${{ steps.changelog_reader.outputs.log_entry }}
         if: startsWith(github.ref, 'refs/tags/v')
 
