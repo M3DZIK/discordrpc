@@ -27,10 +27,10 @@ package() {
 
   install -Dm 755 target/release/${_pkgname} "${pkgdir}/usr/bin/${pkgname}"
 
-  #mkdir -p "$pkgdir"/usr/share/{bash-completion/completions,zsh/site-functions,fish/vendor_completions.d}
-  #target/release/${_pkgname} completions bash > "$pkgdir"/usr/share/bash-completion/completions/${pkgname}
-  #target/release/${_pkgname} completions zsh > "$pkgdir"/usr/share/zsh/site-functions/_${pkgname}
-  #target/release/${_pkgname} completions fish > "$pkgdir"/usr/share/fish/vendor_completions.d/${pkgname}.fish
+  mkdir -p "$pkgdir"/usr/share/{bash-completion/completions,zsh/site-functions,fish/vendor_completions.d}
+  target/release/${_pkgname} --client-id '' --details '' --print-completions bash > "${pkgdir}/usr/share/bash-completion/completions/${pkgname}"
+  target/release/${_pkgname} --client-id '' --details '' --print-completions zsh > "$pkgdir/usr/share/zsh/site-functions/_${pkgname}"
+  target/release/${_pkgname} --client-id '' --details '' --print-completions fish > "${pkgdir}/usr/share/fish/vendor_completions.d/${pkgname}.fish"
 
   install -Dm 644 LICENSE.md "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
