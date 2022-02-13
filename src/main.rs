@@ -1,11 +1,15 @@
 mod cli;
 
-use std::{process::exit, vec, time::{UNIX_EPOCH, SystemTime}};
 use clap::StructOpt;
 use colored::Colorize;
 use discord_rich_presence::{
     activity::{self, Activity},
     new_client, DiscordIpc,
+};
+use std::{
+    process::exit,
+    time::{SystemTime, UNIX_EPOCH},
+    vec,
 };
 
 use crate::cli::Cli;
@@ -86,15 +90,25 @@ fn main() {
         activity = activity.buttons(vec![activity::Button::new(&button_1_text, &button_1_url)]);
     }
 
-    if button_1_text != "none" && button_1_url != "none" && button_2_text != "none" && button_2_url != "none" {
+    if button_1_text != "none"
+        && button_1_url != "none"
+        && button_2_text != "none"
+        && button_2_url != "none"
+    {
         println!("{} {}", "button 2 text :".cyan(), button_2_text.yellow());
         println!("{} {}", "button 2 url :".cyan(), button_2_url.yellow());
 
-        activity = activity.buttons(vec![activity::Button::new(&button_1_text, &button_1_url), activity::Button::new(&button_2_text, &button_2_url)]);
+        activity = activity.buttons(vec![
+            activity::Button::new(&button_1_text, &button_1_url),
+            activity::Button::new(&button_2_text, &button_2_url),
+        ]);
     }
 
     if enable_timer {
-        let time_unix = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs() as i64;
+        let time_unix = SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .unwrap()
+            .as_secs() as i64;
 
         activity = activity.timestamps(activity::Timestamps::new().start(time_unix))
     }
