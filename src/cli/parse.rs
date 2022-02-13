@@ -1,4 +1,5 @@
 use clap::Parser;
+use clap_complete::Shell;
 
 #[derive(Parser, Debug)]
 #[clap(name = "discordrpc")]
@@ -118,4 +119,7 @@ pub struct Cli {
         display_order = 12
     )]
     pub enable_time: bool,
+
+    #[clap(long = "print-completions", value_name = "shell", arg_enum, display_order = 13)]
+    pub print_completions: Option<Shell>,
 }

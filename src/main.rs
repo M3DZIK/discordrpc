@@ -1,6 +1,7 @@
 mod cli;
 
-use clap::StructOpt;
+use clap::{StructOpt, IntoApp};
+use clap_complete::generate;
 use colored::Colorize;
 use discord_rich_presence::{
     activity::{self, Activity},
@@ -10,7 +11,7 @@ use std::{
     process::exit,
     thread::sleep,
     time::{Duration, SystemTime, UNIX_EPOCH},
-    vec,
+    vec, io,
 };
 
 use crate::cli::Cli;
@@ -25,6 +26,14 @@ fn main() {
     .expect("Error setting Ctrl-C handler");
 
     let args = Cli::parse();
+
+    if let Some(shell) = args.print_completions {
+        let mut clap_app = Cli::into_app();
+        let app_name = clap_app.get_name().to_string();
+
+        generate(shell, &mut clap_app, app_name, &mut io::stdout());
+        exit(0)
+    }
 
     let state = args.state;
     let details = args.details;
