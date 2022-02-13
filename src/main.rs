@@ -8,6 +8,7 @@ use discord_rich_presence::{
 };
 use std::{
     process::exit,
+    thread::sleep,
     time::{Duration, SystemTime, UNIX_EPOCH},
     vec,
 };
@@ -122,6 +123,6 @@ fn main() {
     );
 
     loop {
-        std::thread::sleep(Duration::new(9999999, 9999999));
+        sleep(Duration::new(9999999, 9999999));
     }
 }
