@@ -1,15 +1,27 @@
 [package]
-name = "discord-rpc"
+name = "discordrpc"
+description = "Fast Discord RPC Client written in Rust"
+license = "BSD-3-Clause"
+authors = ["MedzikUser <nivua1fn@duck.com>"]
+homepage = "https://github.com/MedzikUser/discord-rpc"
+repository = "https://github.com/MedzikUser/discord-rpc.git"
+keywords = ["discord", "discord-rpc", "discordrpc", "discord-rich-presence", "discord-rpc-client", "discord-rpc-builder"]
+categories = ["command-line-utilities"]
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+lto = true
+panic = 'abort'
+opt-level = 'z'
+codegen-units = 1
 
 [dependencies]
 better-panic = "0.3.0"
 clap_complete = "3.0.6"
 colored = "2.0.0"
 discord-rich-presence = "0.1.8"
+ctrlc = "3.2.1"
 
 [dependencies.clap]
 version = "3.0.14"
