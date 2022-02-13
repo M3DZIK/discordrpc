@@ -120,6 +120,11 @@ pub struct Cli {
     )]
     pub enable_time: bool,
 
-    #[clap(long = "print-completions", value_name = "shell", arg_enum, display_order = 13)]
+    #[clap(
+        long = "print-completions",
+        value_name = "shell",
+        arg_enum,
+        display_order = 13
+    )]
     pub print_completions: Option<Shell>,
 }

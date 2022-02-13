@@ -1,6 +1,6 @@
 mod cli;
 
-use clap::{StructOpt, IntoApp};
+use clap::{IntoApp, StructOpt};
 use clap_complete::generate;
 use colored::Colorize;
 use discord_rich_presence::{
@@ -8,10 +8,11 @@ use discord_rich_presence::{
     new_client, DiscordIpc,
 };
 use std::{
+    io,
     process::exit,
     thread::sleep,
     time::{Duration, SystemTime, UNIX_EPOCH},
-    vec, io,
+    vec,
 };
 
 use crate::cli::Cli;
