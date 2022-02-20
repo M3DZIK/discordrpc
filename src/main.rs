@@ -29,7 +29,7 @@ fn main() {
     let args = Cli::parse();
 
     if let Some(shell) = args.print_completions {
-        let mut clap_app = Cli::into_app();
+        let mut clap_app = Cli::command();
         let app_name = clap_app.get_name().to_string();
 
         generate(shell, &mut clap_app, app_name, &mut io::stdout());
@@ -133,6 +133,7 @@ fn main() {
     );
 
     loop {
+        // * empty `loop {}` wastes CPU cycles
         sleep(Duration::new(9999999, 9999999));
     }
 }

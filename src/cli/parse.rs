@@ -33,7 +33,7 @@ pub struct Cli {
     pub state: String,
 
     #[clap(
-        short = 'N',
+        short = 'I',
         long = "large-image",
         help = "Large Image name",
         default_value = "none",
@@ -43,7 +43,7 @@ pub struct Cli {
     pub large_image: String,
 
     #[clap(
-        short = 'I',
+        short = 'T',
         long = "large-image-text",
         help = "Large Image text",
         default_value = "none",
@@ -53,7 +53,7 @@ pub struct Cli {
     pub large_text: String,
 
     #[clap(
-        short = 'n',
+        short = 'i',
         long = "small-image",
         help = "Small Image name",
         default_value = "none",
@@ -63,7 +63,7 @@ pub struct Cli {
     pub small_image: String,
 
     #[clap(
-        short = 'i',
+        short = 't',
         long = "small-image-text",
         help = "Small Image text",
         default_value = "none",
@@ -83,7 +83,7 @@ pub struct Cli {
     pub button_1_text: String,
 
     #[clap(
-        short = 'T',
+        short = 'U',
         long = "button-1-url",
         help = "Button 1 URL address",
         default_value = "none",
@@ -103,7 +103,7 @@ pub struct Cli {
     pub button_2_text: String,
 
     #[clap(
-        short = 't',
+        short = 'u',
         long = "button-2-url",
         help = "Button 2 URL address",
         default_value = "none",

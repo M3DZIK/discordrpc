@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### CLI
 - added completions
+- update short aliases
 
 ### Other
 - Added README
