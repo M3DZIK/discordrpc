@@ -124,7 +124,7 @@ pub struct Cli {
         short = 'E',
         long = "timeout",
         help = "Exit after X seconds",
-        default_value="0",
+        default_value = "0",
         required = false,
         display_order = 13
     )]
@@ -138,9 +138,6 @@ pub struct Cli {
     )]
     pub print_completions: Option<Shell>,
 
-    #[clap(
-        long = "print-manpage",
-        display_order = 15
-    )]
+    #[clap(long = "print-manpage", display_order = 15)]
     pub manpage: bool,
 }
