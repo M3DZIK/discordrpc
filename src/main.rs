@@ -29,7 +29,7 @@ fn main() {
     }
 
     // * start discord rpc
-    execute::run(args);
+    execute::run(args.clone());
 
     println!(
         "{} {}",
@@ -37,8 +37,16 @@ fn main() {
         "Press Ctrl+C to exit!".magenta()
     );
 
-    loop {
-        // * empty `loop {}` wastes CPU cycles
-        sleep(Duration::new(9999999, 9999999));
+    if args.timeout != 0 {
+        sleep(Duration::from_secs(args.timeout));
+
+        println!("{}", "Stopping due to timeout...".blue());
+
+        exit(0)
+    } else {
+        loop {
+            // * empty `loop {}` wastes CPU cycles
+            sleep(Duration::from_secs(9999999));
+        }
     }
 }
