@@ -7,7 +7,7 @@ homepage = "https://github.com/MedzikUser/discord-rpc#readme"
 repository = "https://github.com/MedzikUser/discord-rpc.git"
 keywords = ["discord", "discord-rpc", "discordrpc", "discord-rpc-client"]
 categories = ["command-line-utilities"]
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 
 [profile.release]
