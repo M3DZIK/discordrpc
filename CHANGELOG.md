@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 <!-- next-header -->
 
 ## [Unreleased]
+- added manpage
 
 ## [0.2.0] - 2022-03-09
 ### CLI

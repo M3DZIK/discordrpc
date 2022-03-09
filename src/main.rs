@@ -19,12 +19,21 @@ fn main() {
 
     let args = Cli::parse();
 
-    // * print_completions
+    // * print completions
     if let Some(shell) = args.print_completions {
         let mut clap_app = Cli::command();
         let app_name = clap_app.get_name().to_string();
 
         generate(shell, &mut clap_app, app_name, &mut io::stdout());
+        exit(0)
+    }
+
+    // * print manpage
+    if args.manpage {
+        let clap_app = Cli::command();
+        let man = clap_mangen::Man::new(clap_app);
+
+        man.render(&mut io::stdout()).expect("generate manpage");
         exit(0)
     }
 

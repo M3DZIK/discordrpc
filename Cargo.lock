@@ -117,6 +117,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "clap_mangen"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0649fb4156bbd7306896025005596033879a2051f9a3aa7416ab915df1f8fdac"
+dependencies = [
+ "clap",
+ "roff",
+]
+
+[[package]]
 name = "colored"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -170,6 +180,7 @@ dependencies = [
  "better-panic",
  "clap",
  "clap_complete",
+ "clap_mangen",
  "colored",
  "ctrlc",
  "discord-rich-presence",
@@ -360,6 +371,12 @@ checksum = "864d3e96a899863136fc6e99f3d7cae289dafe43bf2c5ac19b70df7210c0a145"
 dependencies = [
  "proc-macro2",
 ]
+
+[[package]]
+name = "roff"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b833d8d034ea094b1ea68aa6d5c740e0d04bad9d16568d08ba6f76823a114316"
 
 [[package]]
 name = "rustc-demangle"

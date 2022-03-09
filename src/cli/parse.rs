@@ -137,4 +137,10 @@ pub struct Cli {
         display_order = 14
     )]
     pub print_completions: Option<Shell>,
+
+    #[clap(
+        long = "print-manpage",
+        display_order = 15
+    )]
+    pub manpage: bool,
 }
