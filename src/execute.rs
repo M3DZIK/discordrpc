@@ -1,7 +1,7 @@
 use colored::Colorize;
 use discord_rich_presence::{
     activity::{self, Activity},
-    new_client, DiscordIpc,
+    DiscordIpc, DiscordIpcClient,
 };
 use std::{
     time::{SystemTime, UNIX_EPOCH},
@@ -23,7 +23,7 @@ pub fn run(args: Cli) {
     let button_2_url = args.button_2_url;
     let enable_timer = args.enable_time;
 
-    let mut client = new_client(&args.client_id).expect("failed to create client");
+    let mut client = DiscordIpcClient::new(&args.client_id).expect("failed to create client");
 
     let activity = Activity::new();
 
