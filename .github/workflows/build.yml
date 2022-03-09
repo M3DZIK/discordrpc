@@ -38,7 +38,15 @@ jobs:
         with:
           command: build
 
-      - name: cargo clippy
+      - name: rustfmt
+        if: always()
+        uses: actions-rs/cargo@v1
+        with:
+          command: fmt
+          args: --all --check
+
+      - name: clippy
+        if: always()
         uses: actions-rs/cargo@v1
         with:
           command: clippy
