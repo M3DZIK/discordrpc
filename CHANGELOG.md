@@ -36,6 +36,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - -e, --timer                       Enable timer (counted from the current time) (optional)
 
 <!-- next-url -->
-[Unreleased]: https://github.com/MedzikUser/imgurs/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/MedzikUser/imgurs/commits/v0.2.0
-[0.1.0]: https://github.com/MedzikUser/imgurs/commits/v0.1.0
+[Unreleased]: https://github.com/MedzikUser/discordrpc/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/MedzikUser/discordrpc/commits/v0.2.0
+[0.1.0]: https://github.com/MedzikUser/discordrpc/commits/v0.1.0
