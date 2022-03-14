@@ -23,7 +23,8 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Setup Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -32,6 +33,13 @@ jobs:
           toolchain: ${{ matrix.rust }}
           override: true
           components: rustfmt, clippy
+
+      - name: Cache
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: target
+          key: ${{ runner.os }}-${{ matrix.rust }}-cargo-target-${{ hashFiles('**/Cargo.lock') }}
 
       - name: cargo build
         uses: actions-rs/cargo@v1
