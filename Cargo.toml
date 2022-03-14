@@ -1,7 +1,7 @@
 [package]
 name = "discordrpc"
 description = "Fast Discord RPC Client written in Rust"
-license = "GPL-3"
+license = "GPL-3.0"
 authors = ["MedzikUser <nivua1fn@duck.com>"]
 homepage = "https://github.com/MedzikUser/discord-rpc#readme"
 repository = "https://github.com/MedzikUser/discord-rpc.git"
