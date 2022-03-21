@@ -80,7 +80,7 @@ jobs:
           target: ${{ matrix.target }}
 
       - name: Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache
         with:
           path: target
