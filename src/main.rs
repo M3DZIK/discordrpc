@@ -11,15 +11,9 @@ use crate::cli::Cli;
 fn main() {
     better_panic::install();
 
-    ctrlc::set_handler(move || {
-        println!("{}", "Bye!".red());
-        exit(0)
-    })
-    .expect("Error setting Ctrl-C handler");
-
     let args = Cli::parse();
 
-    // * print completions
+    // print completions
     if let Some(shell) = args.print_completions {
         let mut clap_app = Cli::command();
         let app_name = clap_app.get_name().to_string();
@@ -28,7 +22,7 @@ fn main() {
         exit(0)
     }
 
-    // * print manpage
+    // print manpage
     if args.manpage {
         let clap_app = Cli::command();
         let man = clap_mangen::Man::new(clap_app);
@@ -37,7 +31,7 @@ fn main() {
         exit(0)
     }
 
-    // * start discord rpc
+    // start discord rpc
     execute::run(args.clone());
 
     println!(
@@ -54,7 +48,7 @@ fn main() {
         exit(0)
     } else {
         loop {
-            // * empty `loop {}` wastes CPU cycles
+            // empty `loop {}` wastes CPU cycles
             sleep(Duration::from_secs(9999999));
         }
     }

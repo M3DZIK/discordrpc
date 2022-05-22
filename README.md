@@ -4,18 +4,18 @@
 
 ### Big image, small image, details and one button
 
-![discord rpc 1](https://cdn.magicuser.cf/6MmBURG.png)
+![](https://i.imgur.com/6MmBURG.png)
 
 ```bash
-discordrpc -c 942151169185316874 -d 'untypeable nickname' --button-1-text 'Discord RPC written in Rust' --button-1-url 'https://github.com/MedzikUser/discord-rpc' -N medzik -I medzik -n archlinux -i archlinux`
+discordrpc --client-id 942151169185316874 --details 'untypeable nickname' --button-1-text 'Discord RPC written in Rust' --button-1-url 'https://github.com/MedzikUser/discord-rpc' --large-image medzik --large-image-text medzik --small-image archlinux --small-image-text archlinux
 ```
 
 ### Big image, details, state and two buttons
 
-![discord rpc 2](https://cdn.magicuser.cf/tRbcy40.png)
+![](https://i.imgur.com/tRbcy40.png)
 
 ```bash
-discordrpc -c 942151169185316874 -d 'untypeable nickname' -s 'MedzikUser' --button-1-text 'Discord RPC written in Rust' --button-1-url 'https://github.com/MedzikUser/discord-rpc' --button-2-text 'GitHub' --button-2-url 'https://github.com/MedzikUser' -N medzik -I medzik
+discordrpc --client-id 942151169185316874 --details 'untypeable nickname' --state 'MedzikUser' --button-1-text 'Discord RPC written in Rust' --button-1-url 'https://github.com/MedzikUser/discord-rpc' --button-2-text 'GitHub' --button-2-url 'https://github.com/MedzikUser' --large-image medzik --large-image-text medzik
 ```
 
 ## How to install?
@@ -56,20 +56,20 @@ Make sure you have the latest version of Rust. Then you can run
 1. Go to [Discord Developer Portal](https://discord.com/developers/applications)
 2. Make New Application, name them freely (the name will be displayed in RPC)
 
-![new app](https://cdn.magicuser.cf/RMUjPep.png)
+![new app](https://i.imgur.com/RMUjPep.png)
 
 3. Go to General Information
 
-![general](https://cdn.magicuser.cf/yuQufwT.png)
+![general](https://i.imgur.com/yuQufwT.png)
 
 3. Copy ID
 
-![copy id](https://cdn.magicuser.cf/JDHZ6jy.png)
+![copy id](https://i.imgur.com/JDHZ6jy.png)
 
 5. Then go to the Rich Presence tab (optional)
 
-![rich presence](https://cdn.magicuser.cf/hIB5VEW.png)
+![rich presence](https://i.imgur.com/hIB5VEW.png)
 
 6. Add images to be able to display them in RPC (optional)
 
-![add image](https://cdn.magicuser.cf/vtEs7v6.png)
+![add image](https://i.imgur.com/vtEs7v6.png)

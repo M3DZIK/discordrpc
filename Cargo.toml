@@ -18,12 +18,8 @@ codegen-units = 1
 
 [dependencies]
 better-panic = "0.3.0"
+clap = { version = "3.1.18", features = ["derive"] }
 clap_complete = "3.1.4"
+clap_mangen = "0.1.6"
 colored = "2.0.0"
 discord-rich-presence = "0.2.0"
-ctrlc = "3.2.2"
-clap_mangen = "0.1.6"
-
-[dependencies.clap]
-version = "3.1.18"
-features = ["derive", "cargo", "std"]

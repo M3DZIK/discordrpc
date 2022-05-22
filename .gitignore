@@ -1,2 +1,6 @@
 # Cargo
 /target
+
+# IDEs
+.vscode
+.idea
