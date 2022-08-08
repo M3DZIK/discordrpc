@@ -22,4 +22,4 @@ clap = { version = "3.2.16", features = ["derive"] }
 clap_complete = "3.2.3"
 clap_mangen = "0.1.10"
 colored = "2.0.0"
-discord-rich-presence = "0.2.1"
+discord-rich-presence = "0.2.2"
