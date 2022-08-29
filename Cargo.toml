@@ -19,7 +19,7 @@ codegen-units = 1
 [dependencies]
 better-panic = "0.3.0"
 clap = { version = "3.2.18", features = ["derive"] }
-clap_complete = "3.2.3"
+clap_complete = "3.2.4"
 clap_mangen = "0.1.10"
 colored = "2.0.0"
 discord-rich-presence = "0.2.2"
