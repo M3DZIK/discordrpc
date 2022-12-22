@@ -20,6 +20,6 @@ codegen-units = 1
 better-panic = "0.3.0"
 clap = { version = "3.2.23", features = ["derive"] }
 clap_complete = "3.2.5"
-clap_mangen = "0.1.11"
+clap_mangen = "0.2.6"
 colored = "2.0.0"
 discord-rich-presence = "0.2.3"
